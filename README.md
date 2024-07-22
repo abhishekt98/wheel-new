@@ -12,6 +12,7 @@ Then install the [Node.js](https://nodejs.org) version `v18.12` which we have sp
 nvm install
 ```
 
+
 Make sure that [yarn](https://yarnpkg.com) is installed with it as well in your
 system.
 
