@@ -5,6 +5,7 @@ class Api::V1::NotesController < Api::V1::BaseController
   before_action :load_notes, only: :bulk_delete
 
   def index
+    print_remote_ip
     render_json({ notes: current_user.notes })
   end
 
