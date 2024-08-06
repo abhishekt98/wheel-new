@@ -35,6 +35,8 @@ class Api::V1::NotesController < Api::V1::BaseController
       puts "request.ip: #{request.ip}"
       puts "request.remote_ip: #{request.remote_ip}"
       puts "request.headers['X-Forwarded-For']: #{request.headers['X-Forwarded-For']}"
+      puts "request.headers['True-Client-IP']: #{request.headers['True-Client-IP']}"
+      puts "request.headers['CF-Connecting-IP']: #{request.headers['CF-Connecting-IP']}"
     end
 
     def note_params
