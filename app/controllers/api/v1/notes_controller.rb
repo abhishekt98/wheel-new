@@ -29,6 +29,13 @@ class Api::V1::NotesController < Api::V1::BaseController
 
   private
 
+    def print_remote_ip
+      puts "====================REMOTE IP=================="
+      puts "request.ip: #{request.ip}"
+      puts "request.remote_ip: #{request.remote_ip}"
+      puts "request.headers['X-Forwarded-For']: #{request.headers['X-Forwarded-For']}"
+    end
+
     def note_params
       params.require(:note).permit(:title, :description)
     end
