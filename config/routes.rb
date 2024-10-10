@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     instance_eval(File.read(Rails.root.join("config/routes/#{routes_name}.rb")))
   end
 
+  scope ".well-known" do
+    get "acme-challenge/:token", to: "well_knowns/acme_challenge#show"
+  end
+
   devise_for :users, path_prefix: "devise", controllers: { registrations: "profiles" }
 
   devise_scope :user do
